@@ -437,7 +437,8 @@ namespace BrowserEfficiencyTest
                 var edgeBuildTokens = edgeVersionToken.Split('.');
                 if (edgeBuildTokens.Length > 1)
                 {
-                    if (int.TryParse(edgeBuildTokens[1], out int returnedInt))
+                    int returnedInt;
+                    if (int.TryParse(edgeBuildTokens[1], out returnedInt))
                     {
                         edgeBuildNumber = returnedInt;
                     }
